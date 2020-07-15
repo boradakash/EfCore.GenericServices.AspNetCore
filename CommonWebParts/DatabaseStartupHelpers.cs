@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using ExampleDatabase;
 
@@ -31,6 +32,12 @@ namespace CommonWebParts
                 new TodoItemHybrid("Add Swagger for manual testing", 2)
             };
             context.AddRange(todoHybrids);
+            var books = new List<Book>
+            {
+                new Book("Efcore in action", "test description",DateTime.Now,"test",50,"")
+            };
+            context.AddRange(books);
+
             context.SaveChanges();
         }
     }

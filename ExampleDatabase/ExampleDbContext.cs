@@ -9,6 +9,7 @@ namespace ExampleDatabase
     {
         public DbSet<TodoItem> TodoItems { get; set; }
         public DbSet<TodoItemHybrid> TodoItemHybrids { get; set; }
+        public DbSet<Book> Books { get; set; }
 
         public ExampleDbContext(DbContextOptions<ExampleDbContext> options)
             : base(options) { }
